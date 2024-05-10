@@ -16,8 +16,32 @@ function addItem(e) {
     todoInput.value = ''
     setTodoItemEvent()
     setCancelItemEvent()
+    wordSearchBFS('hi hi')
   }
 }
+
+function wordSearchBFS(word) {
+ const root = document.body
+ const queue = [root]
+  while(queue.length) {
+    const node = queue.pop()
+
+    if(node.innerText.includes(word)) {
+      const message = document.createElement('div')
+      message.innerText = 'Found matching item!'
+      const todoList = document.querySelector('#todo-list')
+      if(todoList.firstChild) {
+        todoList.insertBefore(message, todoList.firstChild)
+      } else {
+        todoList.appendChild(message)
+      }
+
+      return
+    }
+
+    queue.push(...node.children)
+  }
+ }
 
 function setCancelItemEvent() {
   const cancelButtons = document.querySelectorAll('.cancel-item')
