@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <script src="script.js" defer></script>
+  <script src="form-serialization.js" defer></script>
   <link rel="stylesheet" href="style.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,5 +14,39 @@
   <div id="todo-list">
   </div>
  </div>
+
+ <form id="myForm">
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" value="John Doe"><br><br>
+
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" value="john.doe@example.com"><br><br>
+
+  <label for="age">Age:</label>
+  <input type="number" id="age" name="age" value="30"><br><br>
+
+  <fieldset>
+      <legend>Interests:</legend>
+      <label><input type="checkbox" name="interest" value="Sports"> Sports</label>
+      <label><input type="checkbox" name="interest" value="Books" checked> Books</label>
+      <label><input type="checkbox" name="interest" value="Music"> Music</label>
+  </fieldset><br>
+
+  <label for="department">Department:</label>
+  <select name="department">
+      <option value="Engineering">Engineering</option>
+      <option value="Marketing">Marketing</option>
+      <option value="HR">HR</option>
+  </select><br><br>
+
+  <input type="submit" value="Submit">
+</form>
+
+<!-- <form id="myForm">
+  <input type="checkbox" name="features" value="Waterproof" checked>
+  <input type="checkbox" name="features" value="Bluetooth" checked>
+  <input type="checkbox" name="features" value="NFC">
+  <input type="submit" value="Submit">
+</form> -->
 </body>
 </html>
