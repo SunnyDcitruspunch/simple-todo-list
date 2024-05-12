@@ -1,6 +1,10 @@
 const todoInput = document.getElementById('todo-input')
 todoInput.addEventListener('keydown', addItem)
 
+document.addEventListener('DOMContentLoaded', () => {
+  todoInput.focus()
+})
+
 function addItem(e) {
   if(e.key === 'Enter') {
     const item = e.target.value
