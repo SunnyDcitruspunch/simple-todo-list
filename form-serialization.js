@@ -6,7 +6,7 @@ function serializeForm(form) {
       if(Array.isArray(obj[key])) {
         obj[key].push(value)
       } else {
-        obj[key] = [obj[key]]
+        obj[key] = [obj[key], value]
       }
     } else {
       obj[key] = value
